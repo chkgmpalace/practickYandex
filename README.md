@@ -1,1 +1,1 @@
-# chkgmpalace.github.io-2
+# chkgmpalace.github.io

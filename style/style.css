@@ -293,3 +293,204 @@ input[type=submit]:hover{
     opacity: 0.7;
     font-size: 10px;
 }
+@media (min-width: 781px){
+    .header-mobile{
+        display: none;
+    }
+}
+@media (max-width: 780px){
+    header{
+        display: none;
+    }
+    .header-mobile{
+        position: relative;
+    }
+    .wraper{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .menu-triger {
+        background: url(/img/menu.svg) 0 0 repeat;
+        display: block;
+        width: 25px;
+        height: 17px;
+        position: absolute;
+        right: 4px;
+        top: 9px;
+    }
+    .menu-close {
+        background: url(/img/17047.png) 0 0 repeat;
+        display: block;
+        width: 28px;
+        height: 28px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 100;
+    }
+    .menu-popup {
+        background: #2c2e3e;
+        display: none;
+        position: absolute;
+        right: -110%;
+        top: 0;
+        left: -238px;
+        width: 250px;
+        box-sizing: border-box;
+        padding: 30px;
+        z-index: 9999;	
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        border-radius: 10px;
+    }
+    .menu-popup ul {
+        margin: 0;
+        padding: 0;
+    }
+    .menu-popup li {
+        list-style: none;
+        margin: 10px 0;
+        padding: 0;
+    }
+    .menu-popup li a {
+        font-size: 18px;
+        font-family: "Arial";
+        color: rgb(255, 255, 255);
+        line-height: 1.4;	
+        text-decoration: none;
+    }
+    .menu-popup li a:hover{
+        color: #8E18FF;
+    }
+    .body_pointer * {
+        cursor: pointer;
+    }
+    .image-main{
+        position: relative;
+    }
+    .menu{
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        background: transparent;
+        border: none;
+    }
+    .backgrnd{
+        position: absolute;
+        top: 32px;
+        width: 475px;
+        height: 284px;
+    }
+    .title-main{
+        font-size: 25px;
+        padding-left: 90px;
+        margin-top: 40px;
+        width: 200px;
+    }
+    .description-main {
+        font-size: 16px;
+        padding-left: 88px;
+        width: 375px;
+        margin-top: 40px;
+        font-weight: 300;
+    }
+    .but-1 {
+        font-size: 12px;
+        width: 125px;
+        height: 44px;
+        padding: 0;
+    }
+    #section-music {
+        padding-bottom: 65px;
+    }
+    #section-movie {
+        padding-bottom: 90px;
+    }
+    #section-help {
+        padding-bottom: 40px;
+    }
+    .option-description {
+        display: block;
+    }
+    .title-h2 {
+        font-size: 35px;
+    }
+    .option-2 {
+        padding-left: 110px;
+    }
+    .description {
+        width: 500px;
+        font-size: 14px;
+    }
+    .slick-prev {
+        left: 10px !important;
+    }
+    .slick-next {
+        right: 10px !important;
+    }
+    .about {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        padding-top: 60px;
+    }
+    .svg {
+        width: 55px;
+    }
+    .about-descriptiion {
+        font-size: 14px;
+        padding: 0 55px 0 55px;
+    }
+    .image-slider {
+        max-width: 620px;
+    }
+    .slick-prev, .slick-next{
+        display: none !important;
+    }
+    .compatibility {
+        font-size: 14px;
+    }
+    .img-option {
+        max-width: 675px;
+    }
+    .rev-description {
+        padding: 20px 48px 20px 48px;
+        font-size: 15px;
+        top: 150px;
+        left: -3px;
+    }
+    .rev-description {
+        padding: 20px 0px 20px 0px;
+        font-size: 22px;
+        top: 150px;
+        left: -3px;
+        margin: 0 159px;
+    }
+    .link-but-1 {
+        font-size: 15px;
+    }
+    .but-rev {
+        top: 325px;
+        left: 40%;
+        padding: 10px;
+    }
+    .form {
+        top: 500px;
+        padding: 30px;
+        margin: 0px 50px;
+    }
+    .form h2 {
+        font-size: 20px;
+    }
+    input[type=text] {
+        padding: 5px 69px 5px 5px;
+        margin-right: 10px;
+    }
+    input[type=submit] {
+        padding: 8px;
+        font-size: 15px;
+    }
+    .agreement {
+        top: 520px;
+
+    }
+}

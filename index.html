@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="slick-1.8.1/slick/slick.css">
     <link rel="stylesheet" href="slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Яндекс.Алиса</title>
 </head>
 <body>
@@ -35,6 +36,29 @@
                 </div>
             </div>
         </header>
+        <div class="header-mobile">
+            <div class="menu">
+                <a class="menu-triger" href="#"></a>
+                <div class="menu-popup">
+                    <a class="menu-close" href="#"></a>
+                    <ul>
+                        <li><a href="#section-music">Музыка</a></li>
+                        <li><a href="#section-movie">Кино</a></li>		
+                        <li><a href="#section-home">Умный дом</a></li>
+                        <li><a href="#section-help">Помощник</a></li>
+                        <li><a href="#section-reviews">Отзывы</a></li>
+                    </ul>						
+                </div>
+            </div>
+            <img class="image-main" src="img/2.jfif" alt="">
+            <div class="backgrnd">
+                <h1 class="title-main">Умная колонка с&nbsp;Алисой</h1>
+                <p class="description-main">Управляйте голосом. По вашей просьбе она наполнит дом музыкой, покажет кино с хорошим звуком или&nbsp;просто с вами поболтает.</p>
+                <div class="buttons">
+                    <a class="link-but-1" href="https://market.yandex.ru/product--umnaia-kolonka-yandex-stantsiia/1971204201?glfilter=14871214%3A15561940_100307940935&cpa=1&sku=100307940935" target="_blank"><button class="but-1">Купить на Маркете</button></a>
+                </div>
+            </div>
+        </div>
         <section id="section-music">
             <div class="option-description">
                 <div class="option-1">
@@ -105,7 +129,7 @@
                     <div class="svg-item">
                         <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1{fill:none;stroke:#6839cf;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title>Kinopoisk</title><g id="film"><path id="path-4" class="cls-1" d="M11.21,29.15a14,14,0,1,1,17.94-8.36A14,14,0,0,1,11.21,29.15Zm.46-16.59A3.5,3.5,0,1,0,9.58,8.08,3.49,3.49,0,0,0,11.67,12.56Zm9.86,3.59a3.5,3.5,0,1,0-2.09-4.48A3.5,3.5,0,0,0,21.53,16.15ZM17.94,26a3.5,3.5,0,1,0-2.09-4.49A3.49,3.49,0,0,0,17.94,26Zm-9.86-3.6A3.5,3.5,0,1,0,6,17.94,3.48,3.48,0,0,0,8.08,22.42Zm7.58-5.48a1,1,0,1,0-.6-1.28A1,1,0,0,0,15.66,16.94Z"/><path id="path-4-2" data-name="path-4" class="cls-1" d="M11.21,29.15a14,14,0,1,1,17.94-8.36A14,14,0,0,1,11.21,29.15Zm.46-16.59A3.5,3.5,0,1,0,9.58,8.08,3.49,3.49,0,0,0,11.67,12.56Zm9.86,3.59a3.5,3.5,0,1,0-2.09-4.48A3.5,3.5,0,0,0,21.53,16.15ZM17.94,26a3.5,3.5,0,1,0-2.09-4.49A3.49,3.49,0,0,0,17.94,26Zm-9.86-3.6A3.5,3.5,0,1,0,6,17.94,3.48,3.48,0,0,0,8.08,22.42Z"/></g></svg>
                     </div>
-                    <p class="about-descriptiion">Тысячи фильмов и&nbsp;сериалов на Кинопоиске</p>
+                    <p class="about-descriptiion">Тысячи фильмов и сериалов на&nbsp;Кинопоиске</p>
                 </div>
                 <div class="about-item">
                     <div  class="svg-item">
@@ -318,6 +342,44 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="/slick-1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript">
+            $(function() {
+                var $menu_popup = $('.menu-popup');
+        
+            $(".menu-triger").click(function(){
+                $('body').addClass('body_pointer');		
+                $menu_popup.show(0);
+                $menu_popup.animate(
+                    {right: parseInt($menu_popup.css('left'),10) == 0 ? -$menu_popup.outerWidth() : 0}, 
+                    300
+                );
+                return false;
+            });	
+            
+            $(".menu-close").click(function(){
+                $('body').removeClass('body_pointer');		
+                $menu_popup.animate(
+                    {right: parseInt($menu_popup.css('right'),10) == 0 ? -$menu_popup.outerWidth() : 0}, 
+                    300, 
+                    function(){
+                        $menu_popup.hide(0);
+                    }
+                );
+                return false;
+            });	
+            
+            $(document).on('click', function(e){
+                if (!$(e.target).closest('.menu-popup').length){
+                    $('body').removeClass('body_pointer');
+                    $menu_popup.animate(
+                        {right: parseInt($menu_popup.css('right'),10) == 0 ? -$menu_popup.outerWidth() : 0}, 
+                        300, 
+                        function(){
+                            $menu_popup.hide(0);
+                        }
+                    );
+                }
+            });
+        });
         $(document).ready(function(){
             $('.single-item').slick({
             autoplay: true,
